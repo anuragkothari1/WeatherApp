@@ -19,6 +19,7 @@ body{
     text-align: center;
     padding: 10px;
     letter-spacing: 2px;
+    font-size: 1.4rem;
 }
 .main{
     margin-top: 20vh;
@@ -141,5 +142,9 @@ input:focus {
    .main2{
     margin-top: 15vh;
     margin-left:0px
+
+   }
+   .main{
+    margin-top: 10vh;
    }
   }
