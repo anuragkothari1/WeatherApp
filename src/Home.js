@@ -8,10 +8,11 @@ const Home = () => {
     const a=0;
     const fetchData =async()=>{
         try{
-            setLoading(true);
+           
             const response= await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=471fb94ff0e574a226bea4957cfaff4c`);
           
             const data= response.data;
+
             setTemperature(data.main.temp.toFixed());
             setDesc(data.weather[0].main);
             setMin(data.main.temp_min);
@@ -21,6 +22,7 @@ const Home = () => {
             setHumidity(data.main.humidity);
             setwind(data.wind.speed.toFixed());
             setVisibilty(data.visibility);
+            setLoading(true);
         }
         catch(e){
            alert("Please Enter Correct City")
